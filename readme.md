@@ -88,7 +88,7 @@ After deletion, we will remove data associated with your account, subject to leg
 
 ## 8. Children’s Privacy
 
-Mekari is not intended for children under 13, and we do not knowingly collect personal information from children under 13.
+Mekari is not intended for children under 18, and we do not knowingly collect personal information from children under 18.
 
 ## 9. Third-Party Services
 
