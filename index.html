@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light only" />
+  <title>Privacy Policy for Mekari</title>
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --surface: rgba(255, 255, 255, 0.9);
+      --surface-strong: #ffffff;
+      --text: #122033;
+      --muted: #5c6b80;
+      --border: rgba(18, 32, 51, 0.1);
+      --brand: #1c4fd7;
+      --brand-2: #1a9c6a;
+      --brand-soft: rgba(28, 79, 215, 0.08);
+      --accent-soft: rgba(26, 156, 106, 0.08);
+      --shadow: 0 18px 60px rgba(18, 32, 51, 0.08);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --max: 980px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(28, 79, 215, 0.12), transparent 30%),
+        radial-gradient(circle at top right, rgba(26, 156, 106, 0.14), transparent 28%),
+        linear-gradient(180deg, #fbfcff 0%, var(--bg) 100%);
+      line-height: 1.65;
+    }
+
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 20px 56px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(145deg, rgba(255,255,255,0.92), rgba(255,255,255,0.74));
+      border: 1px solid var(--border);
+      border-radius: 32px;
+      box-shadow: var(--shadow);
+      padding: 32px;
+      margin-bottom: 22px;
+      backdrop-filter: blur(18px);
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      pointer-events: none;
+    }
+
+    .hero::before {
+      width: 220px;
+      height: 220px;
+      right: -90px;
+      top: -90px;
+      background: radial-gradient(circle, rgba(28, 79, 215, 0.18), transparent 68%);
+    }
+
+    .hero::after {
+      width: 180px;
+      height: 180px;
+      right: 56px;
+      bottom: -90px;
+      background: radial-gradient(circle, rgba(26, 156, 106, 0.16), transparent 68%);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--brand-soft);
+      color: var(--brand);
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      font-size: 0.88rem;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      box-shadow: 0 0 0 5px rgba(28, 79, 215, 0.08);
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+    }
+
+    .subtitle {
+      max-width: 70ch;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .meta-card {
+      background: rgba(255,255,255,0.8);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 16px 18px;
+    }
+
+    .meta-label {
+      display: block;
+      font-size: 0.82rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+
+    .meta-value {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      word-break: break-word;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 260px minmax(0, 1fr);
+      gap: 22px;
+      align-items: start;
+    }
+
+    .toc {
+      position: sticky;
+      top: 20px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 18px;
+      backdrop-filter: blur(10px);
+    }
+
+    .toc h2 {
+      font-size: 0.95rem;
+      margin: 0 0 12px;
+      letter-spacing: -0.02em;
+    }
+
+    .toc a {
+      display: block;
+      padding: 10px 12px;
+      border-radius: 12px;
+      color: var(--text);
+      font-size: 0.95rem;
+      line-height: 1.35;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .toc a:hover {
+      background: rgba(28, 79, 215, 0.07);
+      text-decoration: none;
+      transform: translateX(2px);
+    }
+
+    .content {
+      min-width: 0;
+    }
+
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      padding: 28px;
+      margin-bottom: 18px;
+      backdrop-filter: blur(10px);
+    }
+
+    .section {
+      scroll-margin-top: 20px;
+    }
+
+    .section + .section {
+      margin-top: 18px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .section-badge {
+      flex: 0 0 auto;
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      color: var(--brand);
+      background: var(--brand-soft);
+      border: 1px solid rgba(28, 79, 215, 0.12);
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 1.38rem;
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+    }
+
+    h3 {
+      margin: 18px 0 10px;
+      font-size: 1.02rem;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+    }
+
+    p {
+      margin: 0 0 14px;
+      color: var(--text);
+    }
+
+    .muted { color: var(--muted); }
+
+    ul, ol {
+      margin: 10px 0 16px 22px;
+      padding: 0;
+    }
+
+    li {
+      margin: 7px 0;
+      padding-left: 4px;
+    }
+
+    .callout {
+      background: linear-gradient(180deg, rgba(26,156,106,0.08), rgba(26,156,106,0.04));
+      border: 1px solid rgba(26,156,106,0.15);
+      border-radius: 18px;
+      padding: 16px 18px;
+      margin: 18px 0;
+    }
+
+    .callout strong {
+      color: var(--brand-2);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .contact-card {
+      background: rgba(255,255,255,0.78);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 16px;
+    }
+
+    .contact-card .label {
+      display: block;
+      font-size: 0.82rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.92rem;
+      padding-top: 8px;
+    }
+
+    .footer a { font-weight: 700; }
+
+    @media (max-width: 920px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .toc {
+        position: relative;
+        top: auto;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .wrap {
+        padding: 18px 14px 38px;
+      }
+
+      .hero,
+      .panel,
+      .toc {
+        border-radius: 22px;
+      }
+
+      .hero {
+        padding: 22px;
+      }
+
+      .panel {
+        padding: 22px;
+      }
+
+      .meta-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h2 {
+        font-size: 1.24rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero" aria-labelledby="title">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>mekari-privacy</div>
+      <h1 id="title">Privacy Policy for Mekari</h1>
+      <p class="subtitle">
+        Mekari provides a personal finance application that helps users track income, spending, accounts, transactions, reports, and AI-assisted financial insights.
+        This policy explains what we collect, how we use it, and the choices you have.
+      </p>
+
+      <div class="meta-grid" role="list" aria-label="Policy metadata">
+        <div class="meta-card" role="listitem">
+          <span class="meta-label">Effective date</span>
+          <div class="meta-value">06/2026</div>
+        </div>
+        <div class="meta-card" role="listitem">
+          <span class="meta-label">Last updated</span>
+          <div class="meta-value">06/2026</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="layout">
+      <aside class="toc" aria-label="Table of contents">
+        <h2>Contents</h2>
+        <a href="#information-we-collect">1. Information We Collect</a>
+        <a href="#how-we-use-information">2. How We Use Information</a>
+        <a href="#ai-advisor">3. AI Advisor</a>
+        <a href="#data-sharing">4. Data Sharing</a>
+        <a href="#storage-security">5. Data Storage and Security</a>
+        <a href="#your-choices">6. Your Choices</a>
+        <a href="#data-deletion">7. Data Deletion</a>
+        <a href="#children">8. Children's Privacy</a>
+        <a href="#third-parties">9. Third-Party Services</a>
+        <a href="#changes">10. Changes to This Policy</a>
+        <a href="#contact">11. Contact Us</a>
+      </aside>
+
+      <article class="content">
+        <section class="panel section" id="information-we-collect">
+          <div class="section-header">
+            <div class="section-badge">1</div>
+            <h2>Information We Collect</h2>
+          </div>
+
+          <h3>Information you provide</h3>
+          <p>We may collect information that you enter into the app, including:</p>
+          <ul>
+            <li>Account and profile information</li>
+            <li>Financial records such as accounts, transactions, spending categories, budgets, and reports</li>
+            <li>Notes or text you choose to enter</li>
+            <li>Support messages you send to us</li>
+          </ul>
+
+          <h3>Information collected automatically</h3>
+          <p>When you use the app, we may collect limited technical information such as:</p>
+          <ul>
+            <li>Device model and operating system version</li>
+            <li>App version</li>
+            <li>Crash logs and diagnostic data, if available</li>
+            <li>Usage events needed to keep the app working properly</li>
+          </ul>
+
+          <h3>Permissions and sensitive data</h3>
+          <p>Mekari may request access to certain device features depending on what you use in the app. For example:</p>
+          <ul>
+            <li>SMS access, if you choose to import transaction-related messages</li>
+            <li>Camera access, if you choose to scan receipts or documents</li>
+            <li>Notification access, if you choose to receive reminders or alerts</li>
+          </ul>
+          <p class="muted">We do not use these permissions for unrelated purposes.</p>
+        </section>
+
+        <section class="panel section" id="how-we-use-information">
+          <div class="section-header">
+            <div class="section-badge">2</div>
+            <h2>How We Use Information</h2>
+          </div>
+          <p>We use the information we collect to:</p>
+          <ul>
+            <li>Provide and improve the app</li>
+            <li>Show your financial summaries, reports, and insights</li>
+            <li>Sync your data across devices, if enabled</li>
+            <li>Generate AI-assisted advisor suggestions</li>
+            <li>Send reminders, alerts, or notifications you enable</li>
+            <li>Diagnose issues and improve performance</li>
+            <li>Respond to support requests</li>
+          </ul>
+        </section>
+
+        <section class="panel section" id="ai-advisor">
+          <div class="section-header">
+            <div class="section-badge">3</div>
+            <h2>AI Advisor</h2>
+          </div>
+          <p>
+            Mekari may include AI-assisted features such as financial health summaries, behavior insights, and guided questions.
+          </p>
+
+          <div class="callout">
+            <strong>Important notes:</strong>
+            <ul>
+              <li>AI features are intended for informational purposes only</li>
+              <li>They are not financial, legal, tax, or investment advice</li>
+              <li>Local rule-based logic may be used to generate some insights instantly</li>
+              <li>On-device AI processing may be used for enhanced summaries or recommendations</li>
+              <li>We do not sell your financial data</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel section" id="data-sharing">
+          <div class="section-header">
+            <div class="section-badge">4</div>
+            <h2>Data Sharing</h2>
+          </div>
+          <p>We do not sell your personal data.</p>
+          <p>We may share data only in limited cases:</p>
+          <ul>
+            <li>With service providers that help us operate the app, such as authentication or cloud sync services</li>
+            <li>When required by law</li>
+            <li>To protect the security, integrity, or rights of the app and its users</li>
+          </ul>
+        </section>
+
+        <section class="panel section" id="storage-security">
+          <div class="section-header">
+            <div class="section-badge">5</div>
+            <h2>Data Storage and Security</h2>
+          </div>
+          <p>We use reasonable technical and organizational measures to help protect your data.</p>
+          <p>Your data may be stored:</p>
+          <ul>
+            <li>On your device</li>
+            <li>In cloud services you enable, such as Firebase-backed sync</li>
+          </ul>
+          <p class="muted">
+            No method of storage or transmission is completely secure, but we work to protect your information as much as reasonably possible.
+          </p>
+        </section>
+
+        <section class="panel section" id="your-choices">
+          <div class="section-header">
+            <div class="section-badge">6</div>
+            <h2>Your Choices</h2>
+          </div>
+          <p>You can:</p>
+          <ul>
+            <li>Review and update your data in the app</li>
+            <li>Disable certain permissions through your device settings</li>
+            <li>Turn off notifications</li>
+            <li>Delete your account and associated data, where supported</li>
+          </ul>
+        </section>
+
+        <section class="panel section" id="data-deletion">
+          <div class="section-header">
+            <div class="section-badge">7</div>
+            <h2>Data Deletion</h2>
+          </div>
+          <p>
+            You may request deletion of your account and app data by using the in-app deletion flow or by contacting us at the email below.
+          </p>
+          <p class="muted">
+            After deletion, we will remove data associated with your account, subject to legal, security, or operational retention requirements.
+          </p>
+        </section>
+
+        <section class="panel section" id="children">
+          <div class="section-header">
+            <div class="section-badge">8</div>
+            <h2>Children's Privacy</h2>
+          </div>
+          <p>
+            Mekari is not intended for children under 13, and we do not knowingly collect personal information from children under 13.
+          </p>
+        </section>
+
+        <section class="panel section" id="third-parties">
+          <div class="section-header">
+            <div class="section-badge">9</div>
+            <h2>Third-Party Services</h2>
+          </div>
+          <p>The app may use third-party services such as:</p>
+          <ul>
+            <li>Firebase Authentication</li>
+            <li>Firebase Cloud Storage / Firestore, if enabled</li>
+            <li>Google services required for Android distribution and app functionality</li>
+          </ul>
+          <p class="muted">These services may process data according to their own privacy practices.</p>
+        </section>
+
+        <section class="panel section" id="changes">
+          <div class="section-header">
+            <div class="section-badge">10</div>
+            <h2>Changes to This Policy</h2>
+          </div>
+          <p>
+            We may update this Privacy Policy from time to time. If we make material changes, we will update the effective date and may notify users in the app or on this page.
+          </p>
+        </section>
+
+        <section class="panel section" id="contact">
+          <div class="section-header">
+            <div class="section-badge">11</div>
+            <h2>Contact Us</h2>
+          </div>
+          <p>If you have questions about this Privacy Policy or your data, contact:</p>
+
+          <div class="contact-grid">
+            <div class="contact-card">
+              <span class="label">Email</span>
+              <a href="mailto:jhonemu342@gmail.com">jhonemu342@gmail.com</a>
+            </div>
+            <div class="contact-card">
+              <span class="label">Developer</span>
+              <div><strong>Yohannes Mumecha Mojo</strong></div>
+            </div>
+            <div class="contact-card">
+              <span class="label">App name</span>
+              <div><strong>Mekari</strong></div>
+            </div>
+            <div class="contact-card">
+              <span class="label">Policy name</span>
+              <div><strong>Privacy Policy for Mekari</strong></div>
+            </div>
+          </div>
+        </section>
+
+        <p class="footer">
+          Public privacy policy for Mekari.
+        </p>
+      </article>
+    </div>
+  </main>
+</body>
+</html>
